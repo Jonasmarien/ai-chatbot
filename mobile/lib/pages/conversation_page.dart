@@ -19,6 +19,7 @@ class _ConversationPageState extends State<ConversationPage> {
       messages: _messages,
       onSendPressed: _handleSendPressed,
       user: _user,
+      theme: const DarkChatTheme(),
     ),
   );
 
