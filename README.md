@@ -1,4 +1,4 @@
-# ai-chatbot
+# AI Chatbot
 
 This repository contains the source code for a chat application developed using Flutter for the mobile front end and the ChatGPT API for natural language processing. The app allows users to engage in real-time chat conversations.
 
