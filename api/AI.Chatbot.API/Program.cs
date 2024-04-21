@@ -1,6 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<AzureOpenAIConfiguration>(builder.Configuration.GetRequiredSection(AzureOpenAIConfiguration.SectionKey));
+builder.Services.AddSingleton<IAssistantFactory>();
+builder.Services.AddSingleton((serviceProvider) => serviceProvider.GetRequiredService<IAssistantFactory>().Create());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
